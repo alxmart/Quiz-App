@@ -4,5 +4,6 @@
     <color name="branco">#FFFFFFFF</color>
 
     <color name="primaria">#0A2C91</color>
+    <color name="destaque">#3A5DC5</color>
     <color name="fundo">#F2F2F2</color>
 </resources>

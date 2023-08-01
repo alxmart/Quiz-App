@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private fun validarCampos() {
 
         val nome = editNome.text.toString()
+
         if ( nome.isNotEmpty() ) {
             textInputLayoutNome.error = null
 
@@ -36,6 +37,9 @@ class MainActivity : AppCompatActivity() {
                 this,
                 PerguntasActivity::class.java
             )
+
+            intent.putExtra("nome", nome)
+
             startActivity( intent )
 
         } else {
