@@ -19,38 +19,36 @@ class MainActivity : AppCompatActivity() {
         inicializarComponentesInterface()
         inicializarEventosClique()
     }
-
-    private fun inicializarEventosClique() {
-        btnIniciar.setOnClickListener { 
-          validarCampos()
-        }
-    }
-    private fun validarCampos() {
-
-        val nome = editNome.text.toString()
-
-        if ( nome.isNotEmpty() ) {
-            textInputLayoutNome.error = null
-
-            // Enviar usuario para tela de perguntas
-            val intent = Intent(
-                this,
-                PerguntasActivity::class.java
-            )
-
-            intent.putExtra("nome", nome)
-
-            startActivity( intent )
-
-        } else {
-            textInputLayoutNome.error = "Preencha seu nome para prosseguir"
-        }
-    }
     private fun inicializarComponentesInterface() {
         textInputLayoutNome = findViewById(R.id.text_input_layout_nome)
         editNome            = findViewById(R.id.edit_nome)
         btnIniciar          = findViewById(R.id.btn_iniciar)
     }
+    private fun inicializarEventosClique() {
+
+        btnIniciar.setOnClickListener {
+            validarCampos()
+        }
+    }
+    private fun validarCampos() {
+
+        val nome = editNome.text.toString()
+        if ( nome.isNotEmpty() ) {
+            textInputLayoutNome.error = null
+
+            // Enviar usuario para tela de perguntas
+           val intent = Intent(
+               this,
+               PerguntasActivity::class.java
+           )
+            intent.putExtra("nome", nome)
+            startActivity( intent )
+        } else {
+            // Fica vermelho e aparece mensagem de erro
+            textInputLayoutNome.error = "Preencha seu nome para prosseguir"
+        }
+    }
+
 }
 
 

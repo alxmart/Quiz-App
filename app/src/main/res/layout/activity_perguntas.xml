@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:background="@color/fundo"
             android:padding="16dp"
-            android:text="Quial foia aduração do primeiro vídeo do YouTube ?"
+            android:text="Qual foi a duração do primeiro vídeo do YouTube ?"
             android:textStyle="bold" />
 
         <RadioGroup
