@@ -12,21 +12,22 @@ class PerguntasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perguntas)
-
         inicializarComponentesInterface()
-        //inicializarEventosClique()
     }
-
     private fun inicializarComponentesInterface() {
 
         textExibicaoNome = findViewById(R.id.text_exibicao_nome)
 
         val bundle = intent.extras
-
-        val nome = bundle?.getString("nome" )
+        val nome = bundle?.getString("nome")
         if (nome != null) {
-            textExibicaoNome.text = "Olá , $nome"
+            textExibicaoNome.text = "Olá, $nome"
         }
-
     }
+
+//    inicializarEventosClique(){
+//    }
+
 }
+
+
