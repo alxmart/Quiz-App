@@ -11,7 +11,7 @@ class PerguntasActivity : AppCompatActivity() {
 
     // Componentes
     private lateinit var textExibicaoNome : TextView
-    private lateinit var textExibicaoREsumo : TextView
+    private lateinit var textExibicaoResumo : TextView
     private lateinit var textTitulo : TextView
     private lateinit var radioResposta1 : RadioButton
     private lateinit var radioResposta2 : RadioButton
@@ -41,7 +41,14 @@ class PerguntasActivity : AppCompatActivity() {
     private fun exibirDadosPerguntaAtual() {
 
         perguntaAtual = listaPerguntas[indicePerguntaAtual]
+
         // Exibir os dados
+        //val textResumo = "1 "
+        textTitulo.text = perguntaAtual.titulo
+        radioResposta1.text = perguntaAtual.resposta1
+        radioResposta2.text = perguntaAtual.resposta2
+        radioResposta3.text = perguntaAtual.resposta3
+
 
     }
 
@@ -50,7 +57,14 @@ class PerguntasActivity : AppCompatActivity() {
     }
     private fun inicializarComponentesInterface() {
 
-        textExibicaoNome = findViewById(R.id.text_exibicao_nome)
+        textExibicaoNome   = findViewById(R.id.text_exibicao_nome)
+        textExibicaoResumo = findViewById(R.id.text_exibicao_resumo)
+        textTitulo         = findViewById(R.id.text_titulo)
+        radioResposta1     = findViewById(R.id.radio_resposta1)
+        radioResposta2     = findViewById(R.id.radio_resposta2)
+        radioResposta3     = findViewById(R.id.radio_resposta3)
+        btnConfirmar       = findViewById(R.id.btn_confirmar)
+
 
         val bundle = intent.extras
         val nome = bundle?.getString("nome")
