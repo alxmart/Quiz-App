@@ -28,7 +28,7 @@ class PerguntasActivity : AppCompatActivity() {
 
     // Totalizadores
     private var totalPerguntas = 0
-
+    private var totalRespostasCorretas = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perguntas)
@@ -42,7 +42,11 @@ class PerguntasActivity : AppCompatActivity() {
 
         btnConfirmar.setOnClickListener {
             if ( validarResposta() ) {
+
+                exibirResultadoResposta()
+
                 indicePerguntaAtual++
+
                 if (indicePerguntaAtual < totalPerguntas) {
                     exibirDadosPerguntaAtual()
                 } else {
@@ -62,6 +66,35 @@ class PerguntasActivity : AppCompatActivity() {
 
             }
         }
+    }
+
+    private fun exibirResultadoResposta() {
+
+      val perguntaCerta = perguntaAtual.respostaCerta
+
+      val respostaSelecionada = when {
+          radioResposta1.isChecked -> 1
+          radioResposta2.isChecked -> 2
+          radioResposta3.isChecked -> 3
+          else -> 0
+      }
+
+      if ( perguntaCerta == respostaSelecionada ) {
+          totalRespostasCorretas++
+          Toast.makeText(
+              this,
+              "Resposta CORRETA",
+              Toast.LENGTH_LONG
+          ).show()
+      } else {
+          Toast.makeText(
+              this,
+              "Resposta errada",
+              Toast.LENGTH_LONG
+          ).show()
+      }
+
+
     }
 
     private fun validarResposta(): Boolean {

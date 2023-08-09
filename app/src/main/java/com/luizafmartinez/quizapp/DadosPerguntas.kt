@@ -37,12 +37,3 @@ class DadosPerguntas {
 
 }
 
-
-
-
-
-
-
-
-
-
