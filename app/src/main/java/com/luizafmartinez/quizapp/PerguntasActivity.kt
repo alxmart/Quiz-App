@@ -51,10 +51,9 @@ class PerguntasActivity : AppCompatActivity() {
                     exibirDadosPerguntaAtual()
                 } else {
                     // Questionario finalizado
-                    val intent = Intent(
-                        this,
-                        ResultadoActivity::class.java
-                    )
+                    val intent = Intent(this, ResultadoActivity::class.java)
+                    intent.putExtra("totalRespostasCorretas", totalRespostasCorretas)
+                    intent.putExtra("totalPerguntas", totalPerguntas)
                     startActivity(intent)
                 }
             } else {
@@ -93,7 +92,6 @@ class PerguntasActivity : AppCompatActivity() {
               Toast.LENGTH_LONG
           ).show()
       }
-
 
     }
 

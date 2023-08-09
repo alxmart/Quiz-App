@@ -13,7 +13,7 @@
         android:layout_marginTop="32dp"
         android:background="@color/branco"
         android:padding="16dp"
-        android:text="acertou 0 de 3"
+        android:text="Acertou 0 de 3"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
