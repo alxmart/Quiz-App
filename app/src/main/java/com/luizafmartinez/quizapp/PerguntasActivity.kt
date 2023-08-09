@@ -105,6 +105,9 @@ class PerguntasActivity : AppCompatActivity() {
         radioResposta1.text = perguntaAtual.resposta1
         radioResposta2.text = perguntaAtual.resposta2
         radioResposta3.text = perguntaAtual.resposta3
+
+        radioGroup.clearCheck()
+
     }
 
     override fun onStart() {
