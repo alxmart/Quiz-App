@@ -35,7 +35,5 @@ class ResultadoActivity : AppCompatActivity() {
 
             }
         }
-
-
     }
 }

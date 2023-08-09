@@ -30,10 +30,6 @@ class DadosPerguntas {
                 pergunta2,
                 pergunta3
             )
-
         }
-
     }
-
 }
-

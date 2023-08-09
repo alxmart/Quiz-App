@@ -48,7 +48,4 @@ class MainActivity : AppCompatActivity() {
             textInputLayoutNome.error = "Preencha seu nome para prosseguir"
         }
     }
-
 }
-
-
